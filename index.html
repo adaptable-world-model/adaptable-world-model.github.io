@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html class="fontawesome-i2svg-active fontawesome-i2svg-complete"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="description" content="Learning Adaptable World Models with Latent Actions">
+  <meta name="keywords" content="DemInf">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AdaWorld</title>
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro">
+  <link rel="stylesheet" href="./static/bulma.min.css">
+  <link rel="stylesheet" href="./static/bulma-carousel.min.css">
+  
+  <link rel="stylesheet" href="./static/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/fontawesome.all.min.css">
+  <link rel="stylesheet" href="./static/academicons.min.css">
+  <link rel="stylesheet" href="./static/index.css">
+
+  <script src="./static/jquery.min.js"></script>
+  <script defer="" src="./static/fontawesome.all.min.js"></script>
+  <script src="./static/bulma-carousel.min.js"></script>
+  <script src="./static/bulma-slider.min.js"></script>
+  <script src="./static/index.js"></script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">
+            <span style="color: rgb(240, 0, 20);">A</span><span style="color: rgb(210, 5, 40);">d</span><span style="color: rgb(180, 10, 65);">a</span><span style="color: rgb(150, 10, 90);">W</span><span style="color: rgb(130, 15, 120);">o</span><span style="color: rgb(120, 25, 140);">r</span><span style="color: rgb(100, 35, 160);">l</span><span style="color: rgb(85, 40, 180);">d</span>
+          </h1> 
+          <h3 class="title is-3 publication-title">Learning Adaptable World Models with Latent Actions</h3>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://github.com/Little-Podi">Shenyuan Gao</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=WjUmtm0AAAAJ">Siyuan Zhou</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://yilundu.github.io">Yilun Du</a><sup>2,3</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://eejzhang.people.ust.hk">Jun Zhang</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://people.csail.mit.edu/ganchuang">Chuang Gan</a><sup>4,5</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">HKUST<sup>1</sup>, Harvard University<sup>2</sup>, Google Deepmind<sup>3</sup>, UMass Amherst<sup>4</sup>, MIT-IBM Watson AI Lab<sup>5</sup></span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2503.xxxxx" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://github.com/Little-Podi/AdaWorld" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <h2 class="subtitle has-text-centered">
+        <span class="has-text-weight-bold" style="color: #8C1515">TL;DR:</span>
+        <span class="has-text-weight-bold">
+          <i>
+          AdaWorld is a highly adaptable world model trained with continuous latent actions, enabling efficient action transfer, world model adaptation, and visual planning.
+          </i>
+        </span>
+      </h2>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h3 class="title is-3">Abstract</h3>
+        <div class="content has-text-justified">
+          <p>
+            World models aim to learn action-controlled prediction models and have proven essential for the development of intelligent agents. However, most existing world models rely heavily on substantial action-labeled data and costly training, making it challenging to adapt to novel environments with heterogeneous actions through limited interactions. This limitation can hinder their applicability across broader domains.
+          </p>
+          <p>
+            To overcome this challenge, we propose AdaWorld, an innovative world model learning approach that enables efficient adaptation. The key idea is to incorporate action information during the pretraining of world models. This is achieved by extracting latent actions from videos in a self-supervised manner, capturing the most critical transitions between frames. We then develop an autoregressive world model that conditions on these latent actions.
+          </p>
+          <p>
+            This learning paradigm enables highly adaptable world models, facilitating efficient transfer and learning of new actions even with limited interactions and finetuning. Our comprehensive experiments across multiple environments demonstrate that AdaWorld achieves superior performance in both simulation quality and visual planning.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-small">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width has-text-centered">
+        <div class="publication-image">
+          <img src="static/images/teaser.png" alt="Teaser" width="66%">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-fullhd">
+    <div class="hero-body">
+      <div class="columns is-centered">
+        <div class="column is-four-fifths">
+          <br/>
+          <h2 class="subtitle has-text-centered">
+            We introduce latent actions as a unified condition for action-aware pretraining from videos. Our world model, dubbed AdaWorld, can readily transfer actions across contexts without training. By initializing action embeddings with corresponding latent actions, AdaWorld can also be adapted into specialized world models efficiently.
+          </h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-widescreen">
+    <div class="hero-body">
+      <div class="content has-text-justified">
+        <h3 id="video-title" class="video-title has-text-centered">Select one set below to view different action transfer results.</h3>
+        <br/>
+        <div class="robot-selector">
+          <div class="buttons has-addons is-centered">
+            <button class="button is-light" onclick="changeRobot('Robot #1', ['./static/videos/robot/1-1.mp4', './static/videos/robot/1-2.mp4', './static/videos/robot/1-3.mp4', './static/videos/robot/1-4.mp4', './static/videos/robot/1-5.mp4', './static/videos/robot/1-6.mp4'])">Robot #1</button>
+            <button class="button is-light" onclick="changeRobot('Robot #2', ['./static/videos/robot/2-1.mp4', './static/videos/robot/2-2.mp4', './static/videos/robot/2-3.mp4', './static/videos/robot/2-4.mp4', './static/videos/robot/2-5.mp4', './static/videos/robot/2-6.mp4'])">Robot #2</button>
+            <button class="button is-light" onclick="changeRobot('Robot #3', ['./static/videos/robot/3-1.mp4', './static/videos/robot/3-2.mp4', './static/videos/robot/3-3.mp4', './static/videos/robot/3-4.mp4', './static/videos/robot/3-5.mp4', './static/videos/robot/3-6.mp4'])">Robot #3</button>
+          </div>
+        </div>
+        <br/>
+        <div id="robot-video" class="video-container">
+          <h4 id="video-title" class="video-title"></h4>
+          <div class="video-wrapper">
+            <div style="width: 33%; float: left; text-align: center">
+              <h6 id="video-title" class="video-title">source video &rarr; target scene</h6>
+              <video id="robot-video-1" autoplay loop muted controls>
+                <source src="" type="video/mp4">
+              </video>
+            </div>
+            <div style="width: 33%; float: left; text-align: center">
+              <h6 id="video-title" class="video-title">source video &rarr; target scene</h6>
+              <video id="robot-video-2" autoplay loop muted controls>
+                <source src="" type="video/mp4">
+              </video>
+            </div>
+            <div style="width: 33%; float: left; text-align: center">
+              <h6 id="video-title" class="video-title">source video &rarr; target scene</h6>
+              <video id="robot-video-3" autoplay loop muted controls>
+                <source src="" type="video/mp4">
+              </video>
+            </div>
+            <div style="width: 33%; float: left; text-align: center">
+              <h6 id="video-title" class="video-title"><br/>source video &rarr; target scene</h6>
+              <video id="robot-video-4" autoplay loop muted controls>
+                <source src="" type="video/mp4">
+              </video>
+            </div>
+            <div style="width: 33%; float: left; text-align: center">
+              <h6 id="video-title" class="video-title"><br/>source video &rarr; target scene</h6>
+              <video id="robot-video-5" autoplay loop muted controls>
+                <source src="" type="video/mp4">
+              </video>
+            </div>
+            <div style="width: 33%; float: left; text-align: center">
+              <h6 id="video-title" class="video-title"><br/>source video &rarr; target scene</h6>
+              <video id="robot-video-6" autoplay loop muted controls>
+                <source src="" type="video/mp4">
+              </video>
+            </div>
+          </div>  
+        </div>
+
+        <h3 id="video-title" class="video-title has-text-centered"></h3>
+        <div class="human-selector">
+          <div class="buttons has-addons is-centered">
+            <button class="button is-light" onclick="changeHuman('Human #1', ['./static/videos/human/1-1.mp4', './static/videos/human/1-2.mp4', './static/videos/human/1-3.mp4', './static/videos/human/1-4.mp4', './static/videos/human/1-5.mp4', './static/videos/human/1-6.mp4'])">Human #1</button>
+            <button class="button is-light" onclick="changeHuman('Human #2', ['./static/videos/human/2-1.mp4', './static/videos/human/2-2.mp4', './static/videos/human/2-3.mp4', './static/videos/human/2-4.mp4', './static/videos/human/2-5.mp4', './static/videos/human/2-6.mp4'])">Human #2</button>
+            <button class="button is-light" onclick="changeHuman('Human #3', ['./static/videos/human/3-1.mp4', './static/videos/human/3-2.mp4', './static/videos/human/3-3.mp4', './static/videos/human/3-4.mp4', './static/videos/human/3-5.mp4', './static/videos/human/3-6.mp4'])">Human #3</button>
+          </div>
+        </div>
+        <br/>
+        <div id="human-video" class="video-container">
+          <h4 id="video-title" class="video-title"></h4>
+          <div class="video-wrapper">
+            <div style="width: 33%; float: left; text-align: center">
+              <h6 id="video-title" class="video-title">source video &rarr; target scene</h6>
+              <video id="human-video-1" autoplay loop muted controls>
+                <source src="" type="video/mp4">
+              </video>
+            </div>
+            <div style="width: 33%; float: left; text-align: center">
+              <h6 id="video-title" class="video-title">source video &rarr; target scene</h6>
+              <video id="human-video-2" autoplay loop muted controls>
+                <source src="" type="video/mp4">
+              </video>
+            </div>
+            <div style="width: 33%; float: left; text-align: center">
+              <h6 id="video-title" class="video-title">source video &rarr; target scene</h6>
+              <video id="human-video-3" autoplay loop muted controls>
+                <source src="" type="video/mp4">
+              </video>
+            </div>
+            <div style="width: 33%; float: left; text-align: center">
+              <h6 id="video-title" class="video-title"><br/>source video &rarr; target scene</h6>
+              <video id="human-video-4" autoplay loop muted controls>
+                <source src="" type="video/mp4">
+              </video>
+            </div>
+            <div style="width: 33%; float: left; text-align: center">
+              <h6 id="video-title" class="video-title"><br/>source video &rarr; target scene</h6>
+              <video id="human-video-5" autoplay loop muted controls>
+                <source src="" type="video/mp4">
+              </video>
+            </div>
+            <div style="width: 33%; float: left; text-align: center">
+              <h6 id="video-title" class="video-title"><br/>source video &rarr; target scene</h6>
+              <video id="human-video-6" autoplay loop muted controls>
+                <source src="" type="video/mp4">
+              </video>
+            </div>
+          </div> 
+        </div>
+
+        <h3 id="video-title" class="video-title has-text-centered"></h3>
+        <div class="game-selector">
+          <div class="buttons has-addons is-centered">
+            <button class="button is-light" onclick="changeGame('Game #1', ['./static/videos/game/1-1.mp4', './static/videos/game/1-2.mp4', './static/videos/game/1-3.mp4', './static/videos/game/1-4.mp4', './static/videos/game/1-5.mp4', './static/videos/game/1-6.mp4'])">Game #1</button>
+            <button class="button is-light" onclick="changeGame('Game #2', ['./static/videos/game/2-1.mp4', './static/videos/game/2-2.mp4', './static/videos/game/2-3.mp4', './static/videos/game/2-4.mp4', './static/videos/game/2-5.mp4', './static/videos/game/2-6.mp4'])">Game #2</button>
+            <button class="button is-light" onclick="changeGame('Game #3', ['./static/videos/game/3-1.mp4', './static/videos/game/3-2.mp4', './static/videos/game/3-3.mp4', './static/videos/game/3-4.mp4', './static/videos/game/3-5.mp4', './static/videos/game/3-6.mp4'])">Game #3</button>
+          </div>
+        </div>
+        <br/>
+        <div id="game-video" class="video-container">
+          <h4 id="video-title" class="video-title"></h4>
+          <div class="video-wrapper">
+            <div style="width: 33%; float: left; text-align: center">
+              <h6 id="video-title" class="video-title">source video &rarr; target scene</h6>
+              <video id="game-video-1" autoplay loop muted controls>
+                <source src="" type="video/mp4">
+              </video>
+            </div>
+            <div style="width: 33%; float: left; text-align: center">
+              <h6 id="video-title" class="video-title">source video &rarr; target scene</h6>
+              <video id="game-video-2" autoplay loop muted controls>
+                <source src="" type="video/mp4">
+              </video>
+            </div>
+            <div style="width: 33%; float: left; text-align: center">
+              <h6 id="video-title" class="video-title">source video &rarr; target scene</h6>
+              <video id="game-video-3" autoplay loop muted controls>
+                <source src="" type="video/mp4">
+              </video>
+            </div>
+            <div style="width: 33%; float: left; text-align: center">
+              <h6 id="video-title" class="video-title"><br/>source video &rarr; target scene</h6>
+              <video id="game-video-4" autoplay loop muted controls>
+                <source src="" type="video/mp4">
+              </video>
+            </div>
+            <div style="width: 33%; float: left; text-align: center">
+              <h6 id="video-title" class="video-title"><br/>source video &rarr; target scene</h6>
+              <video id="game-video-5" autoplay loop muted controls>
+                <source src="" type="video/mp4">
+              </video>
+            </div>
+            <div style="width: 33%; float: left; text-align: center">
+              <h6 id="video-title" class="video-title"><br/>source video &rarr; target scene</h6>
+              <video id="game-video-6" autoplay loop muted controls>
+                <source src="" type="video/mp4">
+              </video>
+            </div>
+          </div> 
+        </div>
+      </div>
+
+      <br/>
+      
+      <div class="content has-text-justified">
+        <h3 id="video-title" class="video-title has-text-centered">AdaWorld enables more effective agent planning.</h3>
+        <div class="content has-text-centered">
+          <p>
+            [Left]: action-agnostic baseline; [Right]: AdaWorld (ours).
+          </p>
+        </div>
+        <div id="hersheyskiss-video" class="video-container">
+          <h4 id="video-title" class="video-title"></h4>
+          <div class="video-wrapper">
+            <div style="width: 33%; float: left; text-align: center">
+              <video autoplay loop muted controls>
+                <source src="static/videos/visualization/jumper1.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div style="width: 33%; float: left; text-align: center">
+              <video autoplay loop muted controls>
+                <source src="static/videos/visualization/jumper2.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div style="width: 33%; float: left; text-align: center">
+              <video autoplay loop muted controls>
+                <source src="static/videos/visualization/jumper3.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="rounded">
+
+<br/>
+
+<section class="hero teaser">
+  <div class="container is-max-widescreen">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-half">
+      <h3 class="title is-3 has-text-centered">Latent Action Model</h3>
+      <br/>
+      <div class="column is-full-width">
+        <div class="publication-image">
+          <img src="./static/images/lam.png" alt="Latent Action Model" width="100%">
+        </div>
+      </div>
+      <h2 class="subtitle has-text-justified">
+        With an information bottleneck design, our latent action autoencoder is able to extract the most critical action information from videos and compresses it into a continuous latent action.
+      </h2>
+      </div>
+
+      <div class="column is-half">
+      <h3 class="title is-3 has-text-centered">Autoregressive World Model</h3>
+      <div class="column is-full-width has-text-centered">
+        <div class="publication-image">
+          <img src="./static/images/wm.png" alt="Autoregressive World Model" width="90%">
+        </div>
+      </div>
+      <h2 class="subtitle has-text-justified">
+        We extract latent actions from videos using the latent action encoder. By leveraging the extracted actions as unified conditions, we pretrain a world model that can perform autoregressive rollouts at inference.
+      </h2>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="rounded">
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h3 class="title is-3">Experiment Results</h3>
+
+        <br/>
+
+        <h4 class="title is-4">Efficient World Model Adapation</h4>
+        <div class="columns is-centered">
+          <div class="column is-full-width has-text-centered">
+            <div class="publication-image">
+              <img src="./static/images/exp1-1.png" alt="Experiment 1-1" width="66%">
+            </div>
+          </div>
+        </div>
+        <div class="columns is-centered">
+          <div class="column is-full-width has-text-centered">
+            <div class="publication-image">
+              <img src="./static/images/exp1-2.png" alt="Experiment 1-2" width="66%">
+            </div>
+          </div>
+        </div>
+
+        <br/>
+
+        <h4 class="title is-4">Visual Planning</h4>
+        <div class="columns is-centered">
+          <div class="column is-full-width has-text-centered">
+            <div class="publication-image">
+              <img src="./static/images/exp2.png" alt="Experiment 2" width="90%">
+            </div>
+          </div>
+        </div>
+
+        <br/>
+
+        <h4 class="title is-4">Action Composition</h4>
+        <div class="columns is-centered">
+          <div class="column is-full-width has-text-centered">
+            <div class="publication-image">
+              <img src="./static/images/exp3.png" alt="Experiment 3" width="90%">
+            </div>
+          </div>
+        </div>
+
+        <br/>
+
+        <h4 class="title is-4">Customizable Actions with Strong Controllability</h4>
+        <div class="columns is-centered">
+          <div class="column is-full-width has-text-centered">
+            <div class="publication-image">
+              <img src="./static/images/exp4.png" alt="Experiment 4" width="100%">
+            </div>
+          </div>
+        </div>
+
+        <br/>
+
+        <h4 class="title is-4">Qualitative Comparison with Other Variants</h4>
+        <div class="columns is-centered">
+          <div class="column is-full-width has-text-centered">
+            <div class="publication-image">
+              <img src="./static/images/exp5.png" alt="Experiment 5" width="100%">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="rounded">
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{gao2025adaworld,
+  title={AdaWorld: Learning Adaptable World Models with Latent Actions}, 
+  author={Gao, Shenyuan and Zhou, Siyuan and Du, Yilun and Zhang, Jun and Gan, Chuang},
+  journal={arXiv preprint arXiv:2503.xxxxx},
+  year={2025}
+}</code></pre>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p></p>
+            Website courtesy of <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.
+          <p></p>
+        </a></div><a href="https://emprise.cs.cornell.edu/flair/">
+      </a></div><a href="https://emprise.cs.cornell.edu/flair/">
+    </a></div><a href="https://emprise.cs.cornell.edu/flair/">
+  </a></div><a href="https://emprise.cs.cornell.edu/flair/">
+</a></footer><a href="https://emprise.cs.cornell.edu/flair/">
+
+</a></body></html>

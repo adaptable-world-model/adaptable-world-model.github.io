@@ -54,6 +54,10 @@
             <span class="author-block">HKUST<sup>1</sup>, Harvard University<sup>2</sup>, Google Deepmind<sup>3</sup>, UMass Amherst<sup>4</sup>, MIT-IBM Watson AI Lab<sup>5</sup></span>
           </div>
 
+          <div class="is-size-5 publication-authors">
+            <span class="has-text-weight-bold">ICML 2025</span>
+          </div>
+
           <div class="column has-text-centered">
             <div class="publication-links">
               <!-- PDF Link. -->
@@ -88,7 +92,7 @@
         <span class="has-text-weight-bold" style="color: #8C1515">TL;DR:</span>
         <span class="has-text-weight-bold">
           <i>
-          AdaWorld is a highly adaptable world model pretrained with continuous latent actions from thousands of environments, enabling efficient action transfer, world model adaptation, and visual planning with limited interactions.
+          We pretrain AdaWorld with continuous latent actions from thousands of environments, making it highly efficient for action transfer, world model adaptation, and visual planning, even with minimal interactions and finetuning steps.
           </i>
         </span>
       </h2>
@@ -103,7 +107,7 @@
         <h3 class="title is-3">Abstract</h3>
         <div class="content has-text-justified">
           <p>
-            World models aim to learn action-controlled prediction models and have proven essential for the development of intelligent agents. However, most existing world models rely heavily on substantial action-labeled data and costly training, making it challenging to adapt to novel environments with heterogeneous actions through limited interactions. This limitation can hinder their applicability across broader domains.
+            World models aim to learn action-controlled future prediction and have proven essential for the development of intelligent agents. However, most existing world models rely heavily on substantial action-labeled data and costly training, making it challenging to adapt to novel environments with heterogeneous actions through limited interactions. This limitation can hinder their applicability across broader domains.
           </p>
           <p>
             To overcome this limitation, we propose AdaWorld, an innovative world model learning approach that enables efficient adaptation. The key idea is to incorporate action information during the pretraining of world models. This is achieved by extracting latent actions from videos in a self-supervised manner, capturing the most critical transitions between frames. We then develop an autoregressive world model that conditions on these latent actions.
@@ -122,7 +126,7 @@
     <div class="columns is-centered">
       <div class="column is-full-width has-text-centered">
         <div class="publication-image">
-          <img src="static/images/teaser.png" alt="Teaser" width="66%">
+          <img src="static/images/teaser.jpg" alt="Teaser" width="66%">
         </div>
       </div>
     </div>
@@ -349,7 +353,7 @@
       <br/>
       <div class="column is-full-width">
         <div class="publication-image">
-          <img src="./static/images/lam.png" alt="Latent Action Autoencoder" width="100%">
+          <img src="./static/images/lam.jpg" alt="Latent Action Autoencoder" width="100%">
         </div>
       </div>
       <h2 class="subtitle has-text-justified">
@@ -361,7 +365,7 @@
       <h3 class="title is-3 has-text-centered">Autoregressive World Model</h3>
       <div class="column is-full-width has-text-centered">
         <div class="publication-image">
-          <img src="./static/images/wm.png" alt="Autoregressive World Model" width="90%">
+          <img src="./static/images/wm.jpg" alt="Autoregressive World Model" width="90%">
         </div>
       </div>
       <h2 class="subtitle has-text-justified">
@@ -386,14 +390,14 @@
         <div class="columns is-centered">
           <div class="column is-full-width has-text-centered">
             <div class="publication-image">
-              <img src="./static/images/exp1-1.png" alt="Experiment 1-1" width="100%">
+              <img src="./static/images/exp1-1.jpg" alt="Experiment 1-1" width="100%">
             </div>
           </div>
         </div>
         <div class="columns is-centered">
           <div class="column is-full-width has-text-centered">
             <div class="publication-image">
-              <img src="./static/images/exp1-2.png" alt="Experiment 1-2" width="100%">
+              <img src="./static/images/exp1-2.jpg" alt="Experiment 1-2" width="100%">
             </div>
           </div>
         </div>
@@ -404,7 +408,7 @@
         <div class="columns is-centered">
           <div class="column is-full-width has-text-centered">
             <div class="publication-image">
-              <img src="./static/images/exp2.png" alt="Experiment 2" width="80%">
+              <img src="./static/images/exp2.jpg" alt="Experiment 2" width="80%">
             </div>
           </div>
         </div>
@@ -415,7 +419,7 @@
         <div class="columns is-centered">
           <div class="column is-full-width has-text-centered">
             <div class="publication-image">
-              <img src="./static/images/exp3.png" alt="Experiment 3" width="80%">
+              <img src="./static/images/exp3.jpg" alt="Experiment 3" width="80%">
             </div>
           </div>
         </div>
@@ -426,7 +430,7 @@
         <div class="columns is-centered">
           <div class="column is-full-width has-text-centered">
             <div class="publication-image">
-              <img src="./static/images/exp4.png" alt="Experiment 4" width="100%">
+              <img src="./static/images/exp4.jpg" alt="Experiment 4" width="100%">
             </div>
           </div>
         </div>
@@ -437,7 +441,7 @@
         <div class="columns is-centered">
           <div class="column is-full-width has-text-centered">
             <div class="publication-image">
-              <img src="./static/images/exp5.png" alt="Experiment 5" width="100%">
+              <img src="./static/images/exp5.jpg" alt="Experiment 5" width="100%">
             </div>
           </div>
         </div>
@@ -448,7 +452,7 @@
         <div class="columns is-centered">
           <div class="column is-full-width has-text-centered">
             <div class="publication-image">
-              <img src="./static/images/exp6.png" alt="Experiment 6" width="80%">
+              <img src="./static/images/exp6.jpg" alt="Experiment 6" width="80%">
             </div>
           </div>
         </div>

@@ -92,7 +92,7 @@
         <span class="has-text-weight-bold" style="color: #8C1515">TL;DR:</span>
         <span class="has-text-weight-bold">
           <i>
-          AdaWorld is a highly adaptable world model pretrained with continuous latent actions from thousands of environments, enabling efficient action transfer, adaptation, and planning with minimal finetuning.
+          AdaWorld is a highly adaptable world model pretrained with continuous latent actions from thousands of environments, enabling zero-shot action transfer, fast adaptation, and effective planning with minimal finetuning.
           </i>
         </span>
       </h2>
@@ -100,53 +100,26 @@
   </div>
 </section>
 
-<section class="section">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h3 class="title is-3">Abstract</h3>
-        <div class="content has-text-justified">
-          <p>
-            World models aim to learn action-controlled future prediction and have proven essential for the development of intelligent agents. However, most existing world models rely heavily on substantial action-labeled data and costly training, making it challenging to adapt to novel environments with heterogeneous actions through limited interactions. This limitation can hinder their applicability across broader domains.
-          </p>
-          <p>
-            To overcome this limitation, we propose AdaWorld, an innovative world model learning approach that enables efficient adaptation. The key idea is to incorporate action information during the pretraining of world models. This is achieved by extracting latent actions from videos in a self-supervised manner, capturing the most critical transitions between frames. We then develop an autoregressive world model that conditions on these latent actions.
-          </p>
-          <p>
-            This learning paradigm enables highly adaptable world models, facilitating efficient transfer and learning of new actions even with limited interactions and finetuning. Our comprehensive experiments across multiple environments demonstrate that AdaWorld achieves superior performance in both simulation quality and visual planning.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <section class="hero is-small">
-  <div class="container is-max-desktop">
+  <div class="container is-max-widescreen">
     <div class="columns is-centered">
-      <div class="column is-full-width has-text-centered">
+      <div class="column is-half has-text-centered">
         <div class="publication-image">
-          <img src="static/images/teaser.jpg" alt="Teaser" width="66%">
+          <img src="static/images/prompt.gif" alt="Prompt" width="100%">
+        </div>
+      </div>
+      <div class="column is-half has-text-centered">
+        <div class="publication-image">
+          <img src="static/images/teaser.gif" alt="Teaser" width="100%">
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="hero teaser">
-  <div class="container is-fullhd">
-    <div class="hero-body">
-      <div class="columns is-centered">
-        <div class="column is-four-fifths">
-          <br/>
-          <h2 class="subtitle has-text-justified">
-            We introduce latent actions as a unified condition for action-aware pretraining from videos. AdaWorld can readily transfer actions across contexts without training. By initializing the control interface with the corresponding latent actions, AdaWorld can also be adapted into specialized world models efficiently and achieve significantly better planning results.
-          </h2>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+<br/>
+
+<br/>
 
 <section class="hero teaser">
   <div class="container is-max-widescreen">
@@ -310,28 +283,42 @@
       <br/>
       
       <div class="content has-text-justified">
-        <h3 id="video-title" class="video-title has-text-centered">AdaWorld enables more effective agent planning.</h3>
-        <div class="content has-text-centered">
-          <p>
-            [Left]: action-agnostic baseline; [Right]: AdaWorld (ours).
-          </p>
-        </div>
+        <h3 id="video-title" class="video-title has-text-centered">AdaWorld enables more effective planning.</h3>
+        <p>
+          On Procgen: [Left] action-agnostic baseline; [Right] AdaWorld (ours).
+        </p>
         <div id="hersheyskiss-video" class="video-container">
-          <h4 id="video-title" class="video-title"></h4>
           <div class="video-wrapper">
-            <div style="width: 33%; float: left; text-align: center">
+            <div style="width: 33.3%; float: left; text-align: center">
               <video autoplay loop muted controls>
                 <source src="static/videos/visualization/jumper1.mp4" type="video/mp4">
               </video>
             </div>
-            <div style="width: 33%; float: left; text-align: center">
+            <div style="width: 33.3%; float: left; text-align: center">
               <video autoplay loop muted controls>
                 <source src="static/videos/visualization/jumper2.mp4" type="video/mp4">
               </video>
             </div>
-            <div style="width: 33%; float: left; text-align: center">
+            <div style="width: 33.3%; float: left; text-align: center">
               <video autoplay loop muted controls>
                 <source src="static/videos/visualization/jumper3.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+        <p>
+          On Robosuite: [Left] goal image; [Mid] action-agnostic baseline; [Right] AdaWorld (ours).
+        </p>
+        <div id="hersheyskiss-video" class="video-container">
+          <div class="video-wrapper">
+            <div style="width: 50%; float: left; text-align: center">
+              <video autoplay loop muted controls>
+                <source src="static/videos/visualization/robosuite1.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div style="width: 50%; float: left; text-align: center">
+              <video autoplay loop muted controls>
+                <source src="static/videos/visualization/robosuite2.mp4" type="video/mp4">
               </video>
             </div>
           </div>
